@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Rabbit Hole Archive</title>
+  <meta name="description" content="Conspiracy theories, unsolved mysteries and true stories that sound made up, sorted by what we actually know.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@1,400&display=swap">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/people.css">
+  <script>try{if(localStorage.getItem("rha-theme")==="light")document.documentElement.dataset.theme="light";if(localStorage.getItem("rha-motion")==="off")document.documentElement.classList.add("calm")}catch(e){}document.documentElement.classList.add("js")</script>
+  <script src="assets/js/config.js"></script>
+</head>
+<body data-page="home" data-photo-hero="1">
+  <div id="site-header"></div>
+  <main id="main">
+
+    <!-- 00 · The archive, opened -->
+    <section class="wall-hero" id="wall" aria-label="The archive, opened">
+      <div class="wall-stage" aria-hidden="true"><div class="wall-plane" data-plane><div class="wall-drift" data-tiles></div></div></div>
+      <div class="wall-shade"></div>
+      <div class="wall-copy">
+        <div class="wrap">
+          <span class="eyebrow" data-wall-eyebrow>The archive, opened</span>
+          <h1>Every mystery has a <em>case file.</em></h1>
+          <p>Conspiracy theories, unsolved mysteries and real history that sounds made up. Every file is stamped with a verdict and keeps what we <em class="serif">know</em> apart from what's only a good theory.</p>
+          <div class="wall-actions">
+            <a class="pill" href="#reel">Enter the archive</a>
+            <button class="pill ghost" type="button" data-random><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/></svg>Pull a random file</button>
+          </div>
+        </div>
+      </div>
+      <div class="wall-meta" data-wall-meta></div>
+      <div class="wall-hint">Scroll</div>
+    </section>
+
+    <!-- 01 · Where to, detective? -->
+    <section class="reel" id="reel" data-reel aria-label="Where to, detective?"></section>
+
+    <!-- 02 · On the reading table -->
+    <section class="section">
+      <div class="wrap">
+        <div class="head reveal"><span class="eyebrow">On the reading table</span><h2>Today's <em>pulls.</em></h2></div>
+        <div class="spotlight" data-spotlight><div class="loading">Fetching files</div></div>
+      </div>
+    </section>
+
+    <!-- 02b · Persons of interest -->
+    <section class="section" style="padding-top:0" data-names-section hidden>
+      <div class="wrap">
+        <div class="head-row head reveal">
+          <div class="head" style="margin:0"><span class="eyebrow">Persons of interest</span><h2>Everyone in the <em>files.</em></h2><p>Suspects, witnesses, investigators, and the people we remember. Each one has a dossier of their own.</p></div>
+          <a class="pill small ghost" href="people.html">Open the Who's Who</a>
+        </div>
+      </div>
+      <div class="names reveal" data-names></div>
+    </section>
+
+    <!-- 03 · Four verdicts -->
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="head-row head reveal">
+          <div class="head" style="margin:0"><span class="eyebrow">How to read a stamp</span><h2>Four <em>verdicts.</em></h2><p>Every case file gets one stamp, based on the best evidence available, not the most exciting option.</p></div>
+          <a class="pill small ghost" href="about.html">How we decide</a>
+        </div>
+        <div class="verdicts reveal" data-verdicts></div>
+      </div>
+    </section>
+
+    <!-- 04 · Every case file -->
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="head-row head reveal">
+          <div class="head" style="margin:0"><span class="eyebrow">Fresh from the filing cabinet</span><h2>Every case <em>file.</em></h2></div>
+          <a class="pill small ghost" href="explore.html">Search &amp; filter</a>
+        </div>
+        <div class="cards" data-latest></div>
+      </div>
+    </section>
+
+    <!-- 05 · Your clearance -->
+    <section class="section" style="padding-top:0">
+      <div class="wrap"><div class="clearance reveal" data-clearance></div></div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/dossier.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

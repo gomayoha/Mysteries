@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>The Rabbit Hole Archive</title>
+  <meta name="description" content="How verdicts and rabbit hole levels work, and our accuracy promise.">
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@1,400&display=swap">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script>try{if(localStorage.getItem("rha-theme")==="light")document.documentElement.dataset.theme="light";if(localStorage.getItem("rha-motion")==="off")document.documentElement.classList.add("calm")}catch(e){}document.documentElement.classList.add("js")</script>
+  <script src="assets/js/config.js"></script>
+</head>
+<body data-page="about" data-title="About the archive">
+  <div id="site-header"></div>
+  <main id="main">
+    <header class="wrap page-head reveal">
+      <span class="eyebrow">About the archive</span>
+      <h1>Curious, not <em>gullible.</em></h1>
+      <p>A place to enjoy the world's strangest stories and come away knowing what's actually true. A good mystery is more fun when you can tell the clues from the noise.</p>
+    </header>
+    <div class="wrap prose" style="padding-bottom:110px">
+      <h2>The ground <em>rules</em></h2>
+      <ul>
+        <li><strong>Facts come first.</strong> Dates, names and numbers stick to well-documented sources.</li>
+        <li><strong>Speculation is labelled.</strong> Every case file has a "What we know" column and a "What's speculation" column, and theories never sneak into the first one.</li>
+        <li><strong>Uncertainty is said out loud.</strong> When historians or scientists disagree, the story says so.</li>
+        <li><strong>Sources are linked.</strong> Every file ends with Wikipedia plus reputable further reading, so you can dig deeper yourself.</li>
+        <li><strong>Real photographs, credited.</strong> Images come from Wikimedia Commons: public domain or free licences, with the credit and licence on every one.</li>
+      </ul>
+
+      <h2>The four <em>stamps</em></h2>
+      <div class="verdicts" data-verdicts style="margin-top:22px"></div>
+
+      <h2>Rabbit hole <em>levels</em></h2>
+      <p>How deep a story goes: how much evidence, how many theories, and how long you could spend reading about it.</p>
+      <ol class="levels" data-levels style="margin-top:20px"></ol>
+
+      <h2>Clearance <em>ranks</em></h2>
+      <p>Reading files, finishing quizzes and earning seals raises your clearance, from Unclassified all the way to Eyes Only. See yours on your <a href="library-card.html">library card</a>.</p>
+
+      <h2>Spotted a <em>mistake?</em></h2>
+      <p>History gets revised and new evidence turns up. Every story lives in one file, <code>data/stories.json</code>, and details still waiting for a fact-check are flagged there. Add <code>&amp;review=1</code> to any story's address to see them highlighted.</p>
+
+      <p class="credits" style="margin-top:44px">Archive mark: <a href="https://commons.wikimedia.org/wiki/File:Wooden_Card_Catalog_Furniture.jpg" target="_blank" rel="noopener">Wooden card catalog</a>, Mark Buckawicki, CC0. Every other photograph is credited on the page where it appears.</p>
+      <p style="margin-top:28px"><a class="pill" href="explore.html" style="text-decoration:none;color:var(--bg)">Start exploring</a></p>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script>
+    (function () {
+      const { SITE, escapeHtml, observeReveals } = window.App;
+      document.querySelector("[data-verdicts]").innerHTML = SITE.verdicts.map((v) =>
+        `<div class="verdict"><span class="stamp will-stamp v-${v.id}">${escapeHtml(v.label)}</span><p>${escapeHtml(v.blurb)}</p></div>`).join("");
+      document.querySelector("[data-levels]").innerHTML = SITE.levels.map((l, i) =>
+        `<li><span class="lv">−${i + 1}</span><div><b>${escapeHtml(l.name)}</b><span>${escapeHtml(l.blurb)}</span></div></li>`).join("");
+      observeReveals();
+    })();
+  </script>
+</body>
+</html>

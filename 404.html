@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+  <style>
+    :root { --paper: #000; --ink: #f5f5f7; --ink-2: #a1a1a6; --gold: #f3c969; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Inter, sans-serif; text-align: center; padding: 24px; }
+    svg { width: 180px; margin: 0 auto 20px; display: block; }
+    h1 { font-size: clamp(2.4rem, 7vw, 4.4rem); margin: 0 0 14px; letter-spacing: -0.035em; line-height: 1.02; }
+    h1 em { font-family: "New York", "Iowan Old Style", Georgia, serif; font-weight: 400; color: var(--gold); }
+    small { display: block; margin-bottom: 14px; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+    p { color: var(--ink-2); font-size: 1.1rem; margin: 0 0 28px; }
+    a { display: inline-block; padding: 14px 26px; border-radius: 999px; background: var(--ink); color: #000; font-weight: 600; text-decoration: none; }
+    .ears { animation: peek 2.4s ease-in-out infinite; transform-origin: 90px 110px; }
+    @keyframes peek { 0%, 100% { transform: translateY(18px); } 40%, 70% { transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <main>
+    <svg viewBox="0 0 180 130" aria-hidden="true" style="display:none">
+      <g class="ears"><ellipse cx="78" cy="78" rx="8" ry="28" fill="#fff" stroke="#1a2340" stroke-width="4" transform="rotate(-10 78 78)"/><ellipse cx="102" cy="78" rx="8" ry="28" fill="#fff" stroke="#1a2340" stroke-width="4" transform="rotate(10 102 78)"/></g>
+      <ellipse cx="90" cy="110" rx="70" ry="16" fill="#111113" stroke="#f3c969" stroke-opacity=".5"/>
+    </svg>
+    <small>Error 404 · File not found</small>
+    <h1>This case file has gone <em>missing.</em></h1>
+    <p>Either it was never filed, or something very mysterious happened to it.</p>
+    <a id="home" href="./">Back to the archive</a>
+  </main>
+  <script>
+    // On GitHub Pages project sites the archive lives one folder down (user.github.io/repo/).
+    var parts = location.pathname.split("/").filter(Boolean);
+    if (location.hostname.endsWith("github.io") && parts.length) document.getElementById("home").href = "/" + parts[0] + "/";
+    else document.getElementById("home").href = "/";
+  </script>
+</body>
+</html>

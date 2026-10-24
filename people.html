@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>The Rabbit Hole Archive</title>
+  <meta name="description" content="Every name in the archive: suspects, witnesses, investigators, the people we remember, and where the theories came from.">
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@1,400&display=swap">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/people.css">
+  <script>try{if(localStorage.getItem("rha-theme")==="light")document.documentElement.dataset.theme="light";if(localStorage.getItem("rha-motion")==="off")document.documentElement.classList.add("calm")}catch(e){}document.documentElement.classList.add("js")</script>
+  <script src="assets/js/config.js"></script>
+</head>
+<body data-page="people" data-title="Who's Who">
+  <div id="site-header"></div>
+  <main id="main" class="who">
+    <header class="wrap page-head reveal">
+      <span class="eyebrow">Persons of interest</span>
+      <h1>Who's <em>who.</em></h1>
+      <p>Every name in the archive, in one place. Each role opens its own kind of file: red for suspects, yellow for witnesses, blue for investigators, a quiet page for the people we remember.</p>
+      <div class="who-stats" data-stats></div>
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+        <label class="visually-hidden" for="q">Search names</label>
+        <input id="q" type="search" placeholder="Search a name, a role or a case" autocomplete="off">
+      </div>
+      <div class="who-legend" data-legend role="group" aria-label="Filter by role"></div>
+    </header>
+    <div class="wrap who-layout">
+      <div data-people><div class="loading">Opening the files</div></div>
+      <nav class="az" data-az aria-label="Jump to letter"></nav>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/dossier.js"></script>
+  <script src="assets/js/people.js"></script>
+</body>
+</html>

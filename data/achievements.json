@@ -1,0 +1,116 @@
+{
+  "achievements": [
+    {
+      "id": "first-steps",
+      "name": "First Steps Down",
+      "description": "Explore your first case file.",
+      "glyph": "1",
+      "color": "#ff8a65",
+      "rule": {
+        "type": "explored",
+        "count": 1
+      }
+    },
+    {
+      "id": "cold-case-detective",
+      "name": "Cold Case Detective",
+      "description": "Explore 5 unsolved mysteries.",
+      "glyph": "CC",
+      "color": "#bf5af2",
+      "rule": {
+        "type": "verdict",
+        "verdict": "unsolved",
+        "count": 5
+      }
+    },
+    {
+      "id": "myth-buster",
+      "name": "Myth Buster",
+      "description": "Explore 5 debunked theories.",
+      "glyph": "MB",
+      "color": "#ff453a",
+      "rule": {
+        "type": "verdict",
+        "verdict": "debunked",
+        "count": 5
+      }
+    },
+    {
+      "id": "truth-is-stranger",
+      "name": "Truth Is Stranger",
+      "description": "Read a story that turned out to be Actually True.",
+      "glyph": "!",
+      "color": "#30d158",
+      "rule": {
+        "type": "verdict",
+        "verdict": "true",
+        "count": 1
+      }
+    },
+    {
+      "id": "deep-diver",
+      "name": "Deep Diver",
+      "description": "Survive a level-5 rabbit hole.",
+      "glyph": "5",
+      "color": "#6e9bff",
+      "rule": {
+        "type": "level",
+        "min": 5,
+        "count": 1
+      }
+    },
+    {
+      "id": "quiz-whiz",
+      "name": "Quiz Whiz",
+      "description": "Get a perfect score on 5 quizzes.",
+      "glyph": "QW",
+      "color": "#64d2ff",
+      "rule": {
+        "type": "quizPerfect",
+        "count": 5
+      }
+    },
+    {
+      "id": "down-the-burrow",
+      "name": "Down the Burrow",
+      "description": "Hit the Random button 3 times.",
+      "glyph": "?",
+      "color": "#ff9f0a",
+      "rule": {
+        "type": "random",
+        "count": 3
+      }
+    },
+    {
+      "id": "drawer-hopper",
+      "name": "Drawer Hopper",
+      "description": "Explore at least one story from every drawer.",
+      "glyph": "DH",
+      "color": "#3fd5b5",
+      "rule": {
+        "type": "everyCategory"
+      }
+    },
+    {
+      "id": "half-way",
+      "name": "Halfway Down",
+      "description": "Explore 10 case files.",
+      "glyph": "10",
+      "color": "#f3c969",
+      "rule": {
+        "type": "explored",
+        "count": 10
+      }
+    },
+    {
+      "id": "grand-archivist",
+      "name": "Grand Archivist",
+      "description": "Explore every case file in the archive.",
+      "glyph": "GA",
+      "color": "#e5e5ea",
+      "rule": {
+        "type": "all"
+      }
+    }
+  ]
+}
